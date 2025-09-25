@@ -1,5 +1,5 @@
 # Dice-Game
-Two player game where the player with the highest roll total wins.
+Two player game where the player with the highest dice roll total wins.
 
 ## Features 
 - Players choose their names
