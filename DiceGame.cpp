@@ -1,3 +1,6 @@
+//Dice Game
+//By: Caitlin Ochuwa
+//Completed: 9/25/25
 #include <iostream>
 #include <random>
 #include <ctime> //time
