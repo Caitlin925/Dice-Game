@@ -1,6 +1,3 @@
-//Dice Game
-//By: Caitlin Ochuwa
-//Completed: 9/25/25
 #include <iostream>
 #include <random>
 #include <ctime> //time
@@ -9,7 +6,8 @@ using namespace std;
 
 int main(){
     //Allows program to have different random outputs each time it runs
-    srand(static_cast<unsigned int>(time(nullptr))); 
+    unsigned seed = time(0);
+    srand(seed); 
 
     //Constant max and min values the dice can roll
     const int MIN = 1, MAX = 6;
@@ -17,10 +15,10 @@ int main(){
     string player1, player2;
 
     //Assigns a random value from 1-6 to each dice variable
-    dice1 = MIN + rand() % (MAX - MIN + 1);
-    dice2 = MIN + rand() % (MAX - MIN + 1);
-    dice3 = MIN + rand() % (MAX - MIN + 1);
-    dice4 = MIN + rand() % (MAX - MIN + 1);
+    dice1 = rand() % (MAX - MIN) + MIN;
+    dice2 = rand() % (MAX - MIN) + MIN;
+    dice3 = rand() % (MAX - MIN) + MIN;
+    dice4 = rand() % (MAX - MIN) + MIN;
 
     //Totals the roll for the first 2 die and the other 2 die
     total1 = dice1 + dice2;
@@ -46,10 +44,10 @@ int main(){
 
     //Win and Lose Mechanics
     if (total1 > total2){
-        cout << player1 << "(Player 1) wins!" << endl;
+        cout << player1 << " (Player 1) wins!" << endl;
     }
     else if (total1 < total2){
-        cout << player2 << "(Player 2) wins" << endl;
+        cout << player2 << " (Player 2) wins" << endl;
     }
     else if (total1 == total2){
         cout << "It's a tie!" << endl;
