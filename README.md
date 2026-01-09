@@ -1,4 +1,4 @@
-# Dice-Game
+# Dice Game
 Two player game where the player with the highest dice roll total wins.
 
 ## Features 
